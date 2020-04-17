@@ -1,0 +1,174 @@
+/* Общие стили */
+* {
+ margin: 0;
+ padding: 0;
+}
+article, figure, footer, header, nav, section {display: block;} /*Компонент отображается как блок, 
+                                                                 при использовании значения блока компонента будет 
+                                                                стоять независимая строка по сравнению с компонентом до и после него*/
+ul {
+ list-style: none;
+}
+a {
+ text-decoration: none;/*Текстовое оформление*/
+}
+/* Шапка */
+header {
+ width: 100%;
+ margin-bottom: 30px;
+ position: relative;   /*относительное положение*/
+ height: 70px;
+}
+/* Меню*/
+ }
+.logo {
+ display: block;
+ float: left;
+ padding: 25px;
+}
+.menu {
+ float: right;
+}
+.menu li {
+ display: inline-block;   /*Компонент будет отображаться как блок, но как встроенный блок*/
+}
+.menu a {
+ text-transform: uppercase;  /*заглавные буквы*/
+ display: block;
+ color: darkcyan;
+ padding: 10px;
+}
+.menu a:hover {                        /*Селектор: hover используется для выбора элемента, 
+                                       который в данный момент находится над пользователем */
+ color: #fff;
+ background-color: darkcyan;
+}
+/* Основное содержимое */
+.container {    /*контейнер,Молекулы содержатся в нем*/
+ margin: 0 auto;
+ width: 100%;
+ max-width: 960px;
+}
+html {
+  font: 1.1em/1.4 Helvetica, sans-serif;
+}
+img {
+  max-width: 100%;
+  display: block;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+* { box-sizing: border-box; } 
+.media {
+  display: flex;              /*Помогает гибкости компонентов в виде inline.*/
+  flex-wrap: wrap;           /*Элементы Flex можно разбить на две строки, если общая ширина элементов превышает ширину контейнера.*/
+  border: 2px solid rgb(86,98,110);
+  border-radius: 10px;
+  margin-bottom: 2em;
+  margin-top: 3em
+}
+
+.media > * {
+  flex: 1 1 550px;
+  margin: 10px;
+} 
+.wrapper {           /*Раздел, который окружает теги div в нем*/
+  width: 960px;
+  border: 5px ;
+  max-width:100%;
+}
+
+#xyz {
+            color: red;
+			margin-top: 2em;
+			margin-bottom: 1em;
+			
+}
+#xyz1 {
+	        color: blue;
+			margin-top: 2em;
+			margin-bottom: 1em;
+}
+.bookmark {
+ color: #00AC6B;
+}
+.added {
+ color: #FF4F00;
+}
+.bookmark-list a {
+ margin-right: 5px;
+}
+/* Футер */
+footer {
+ margin-top: 30px;
+ height: 70px;
+ line-height: 100px;
+}
+.col-three {
+ width: 33.3333333333%;
+ float: left;
+ text-align: center;
+}
+@media (min-width:768) (max-width: 1024px) {
+/* Ширину класса container делаем резиновой */
+ .container {
+ max-width: 70%;
+ }
+ .wrapper{
+	 max-width:100%;
+ }
+ .img{
+	 max-width:100%;
+ }
+/* Расположение блоков в footer делаем в одну колонку */
+ .col-three {
+ float: none;
+ width: 100%;
+ text-align: center;
+ }
+}
+@media (min-width :480px) (max-width:767px) {
+/* Ширину класса container делаем резиновой */
+ .container {
+ max-width: 80%;
+ }
+ .wrapper{
+	 max-width:100%;
+ }
+ .img{
+	 max-width:100%;
+ }
+ 
+/* Расположение блоков в footer делаем в одну колонку */
+ .col-three {
+ float: none;
+ width: 100%;
+ text-align: center;
+ }
+}
+@media (max-width: 479) {
+/* Ширину класса container делаем резиновой */
+ .container {
+ max-width: 90%;
+ 
+ }
+ .wrapper{
+	 max-width:100%;
+	 background:red;
+ }
+ .img{
+	 max-width:100%;
+ }
+/* Расположение блоков в footer делаем в одну колонку */
+ .col-three {
+ float: none;
+ width: 100%;
+ text-align: center;
+ }
+
+}
